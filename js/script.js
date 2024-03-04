@@ -105,7 +105,7 @@ const rePlay = () => {
   minImg[contator].classList.add('active'); 
 }
 
-const temporal = setInterval (rePlay, 3000);
+const temporal = setInterval (rePlay, 1000);
 
 
 ///// BONUS //////
@@ -114,3 +114,10 @@ const temporal = setInterval (rePlay, 3000);
 box.addEventListener('mouseover', function () {
   clearInterval(temporal);
 })
+
+box.addEventListener('mouseout', function () {
+  temporal = setInterval (rePlay, 1000);
+})
+
+
+
