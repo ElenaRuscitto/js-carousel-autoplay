@@ -81,3 +81,28 @@ btnUp.addEventListener ('click', function() {
   minImg[countersImg].classList.add('active'); 
 
 })
+
+
+// ARRAY FUNCTION - Timeng Function - set-Interval
+
+let contator = 0;
+
+const rePlay = () => {
+
+  imgCollection[contator].classList.add('hide');
+  minImg[contator].classList.remove('active');
+
+  contator++;
+  
+  if (contator >= immagini.length) {
+    contator = 0;
+    console.log(contator)
+  }
+
+
+  imgCollection[contator].classList.remove('hide');
+
+  minImg[contator].classList.add('active'); 
+}
+
+const temporal = setInterval (rePlay, 3000);
