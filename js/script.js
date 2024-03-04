@@ -105,17 +105,18 @@ const rePlay = () => {
   minImg[contator].classList.add('active'); 
 }
 
-const temporal = setInterval (rePlay, 1000);
+let temporal = setInterval (rePlay, 1000);
 
 
 ///// BONUS //////
 
 // quando il mouse sta sopra al box, con clearInterval interrompo lo slider
-box.addEventListener('mouseover', function () {
+box.addEventListener('mouseenter', function () {
   clearInterval(temporal);
 })
 
-box.addEventListener('mouseout', function () {
+// quando il mouse si sposta da sopra il box, riparte lo slider
+box.addEventListener('mouseleave', function () {
   temporal = setInterval (rePlay, 1000);
 })
 

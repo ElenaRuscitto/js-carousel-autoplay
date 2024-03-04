@@ -12,4 +12,6 @@ Per evitare conflitti con lo scroll manuale, quando il mouse si trova sopra lo s
 ## SVOLGIMENTO
 1. fare una Timeng Function con set-Interval per creare un a ripetizione delle immagini. le immagini cambieranno ogni 3 secondi. (3000 ms).
 
-2. fare un clearInterval  in mouseover al box delle immagini.
+2. quando il mouse sta sopra al box, con clearInterval interrompo lo slider.
+
+3. quando il mouse si sposta da sopra il box, riparte lo slider
