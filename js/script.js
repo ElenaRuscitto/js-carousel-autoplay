@@ -1,7 +1,7 @@
 
 const immagini = ['img/01.webp', 'img/02.webp', 'img/03.webp', 'img/04.webp', 'img/05.webp'];
 const miniImmagine = ['img/01.webp', 'img/02.webp', 'img/03.webp', 'img/04.webp', 'img/05.webp']
-
+const box = document.querySelector('.box');
 const imageBig = document.querySelector('.image-big');
 
 for (let i = 0; i < immagini.length; i++) {
@@ -94,7 +94,7 @@ const rePlay = () => {
 
   contator++;
   
-  if (contator >= immagini.length) {
+  if (contator == immagini.length) {
     contator = 0;
     console.log(contator)
   }
@@ -106,3 +106,11 @@ const rePlay = () => {
 }
 
 const temporal = setInterval (rePlay, 3000);
+
+
+///// BONUS //////
+
+// quando il mouse sta sopra al box, con clearInterval interrompo lo slider
+box.addEventListener('mouseover', function () {
+  clearInterval(temporal);
+})
